@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js task Part 2 IFrame</title>
+    <script>
+      function showlocation() {
+         streetadress = document.getElementById("streetadress").value
+         streetadress = streetadress.replace(/\s/g, '')
+         city = document.getElementById("city").value
+         document.getElementById("mapFrame").src = "https://www.google.com/maps?q="+ streetadress + city +"&output=embed"
+      }
+    </script>
+</head>
+<body>
+    <iframe id="mapFrame" src="https://www.google.com/maps?q=Yliopistonkatu36Lappeenranta&output=embed" frameborder="0" width="50%" height="300px">
+
+    </iframe>
+    <div>
+        <h4>Search for a plcae</h4>
+        <div>
+            Street address : <input type="text" id="streetadress" placeholder="Type the street address">
+            City : <input type="text" id="city" placeholder="Type the city">
+            <button id="result" onclick="showlocation()">Search</button>
+        </div>
+    </div>
+</body>
+</html>
